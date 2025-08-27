@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- WhatsApp Floating Button -->
+        <div
+          id="whatsapp-float"
+          class="whatsapp-float"
+          data-phone="+923354342119"
+          data-message="For more information, please send a message on WhatsApp. مزید معلومات کے لیے براہِ کرم واٹس ایپ پر پیغام بھیجیں۔"
+          data-position="right"
+          data-popup="true"
+          data-pulse="false"
+        >
+          <a href="#" id="whatsapp-link" target="_blank" rel="noopener noreferrer">
+            <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.787"/>
+            </svg>
+            <span class="whatsapp-text">Chat with us</span>
+          </a>
+
+          <!-- Tooltip -->
+          <div class="whatsapp-tooltip" id="whatsapp-tooltip">Need help? Chat with us on WhatsApp!</div>
+        </div>
+
+        <!-- Chat Popup -->
+        <div id="whatsapp-popup" class="whatsapp-popup">
+          <div class="popup-header">
+            <div class="popup-title">
+              <svg class="popup-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.787"/>
+              </svg>
+              <span>WhatsApp Chat</span>
+            </div>
+            <button class="popup-close" id="popup-close">&times;</button>
+          </div>
+          <div class="popup-content">
+            <div class="chat-message">
+              <div class="message-avatar">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+              </div>
+              <div class="message-content">
+                <p>Hi there! 👋</p>
+                <p>How can we help you today?</p>
+              </div>
+            </div>
+            <div class="chat-input">
+              <input type="text" id="chat-message" placeholder="Type your message...">
+              <button id="send-message">Send</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Overlay -->
+        <div id="whatsapp-overlay" class="whatsapp-overlay"></div>
+
+        <script>
+        // WhatsApp Float JavaScript (embedded)
+        class WhatsAppFloat {
+            constructor(options = {}) {
+                this.config = {
+                    phoneNumber: options.phoneNumber || '',
+                    message: options.message || 'Hi! I\'m interested in your products.',
+                    position: options.position || 'right',
+                    showPopup: options.showPopup !== false,
+                    autoShow: options.autoShow !== false,
+                    showTooltip: options.showTooltip !== false,
+                    pulseAnimation: options.pulseAnimation === true,
+                    delayTime: options.delayTime || 3000,
+                    ...options
+                };
+
+                this.floatElement = null;
+                this.popupElement = null;
+                this.overlayElement = null;
+                this.tooltipElement = null;
+                this.isPopupOpen = false;
+                this.isInitialized = false;
+
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', () => this.init());
+                } else {
+                    this.init();
+                }
+            }
+
+            init() {
+                if (this.isInitialized) return;
+
+                this.findElements();
+                this.setupEventListeners();
+                this.setupConfiguration();
+                
+                if (this.config.autoShow) {
+                    this.showWithDelay();
+                }
+
+                this.isInitialized = true;
+            }
+
+            findElements() {
+                this.floatElement = document.getElementById('whatsapp-float');
+                this.popupElement = document.getElementById('whatsapp-popup');
+                this.overlayElement = document.getElementById('whatsapp-overlay');
+                this.tooltipElement = document.getElementById('whatsapp-tooltip');
+
+                if (!this.floatElement) {
+                    console.error('WhatsApp float element not found');
+                    return;
+                }
+            }
+
+            setupConfiguration() {
+                if (this.config.position === 'left') {
+                    this.floatElement.style.left = '20px';
+                    this.floatElement.style.right = 'auto';
+                    
+                    if (this.popupElement) {
+                        this.popupElement.style.left = '20px';
+                        this.popupElement.style.right = 'auto';
+                    }
+                }
+
+                if (this.config.pulseAnimation) {
+                    this.floatElement.classList.add('pulse');
+                }
+
+                if (!this.config.showTooltip && this.tooltipElement) {
+                    this.tooltipElement.style.display = 'none';
+                }
+
+                if (!this.config.showPopup && this.popupElement) {
+                    this.popupElement.style.display = 'none';
+                }
+            }
+
+            setupEventListeners() {
+                const whatsappLink = document.getElementById('whatsapp-link');
+                if (whatsappLink) {
+                    whatsappLink.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        
+                        if (this.config.showPopup && !this.isPopupOpen) {
+                            this.openPopup();
+                        } else {
+                            this.openWhatsApp();
+                        }
+                    });
+                }
+
+                const closeButton = document.getElementById('popup-close');
+                if (closeButton) {
+                    closeButton.addEventListener('click', () => this.closePopup());
+                }
+
+                if (this.overlayElement) {
+                    this.overlayElement.addEventListener('click', () => this.closePopup());
+                }
+
+                const sendButton = document.getElementById('send-message');
+                const messageInput = document.getElementById('chat-message');
+                
+                if (sendButton && messageInput) {
+                    sendButton.addEventListener('click', () => this.sendMessage());
+                    messageInput.addEventListener('keypress', (e) => {
+                        if (e.key === 'Enter') {
+                            this.sendMessage();
+                        }
+                    });
+                }
+
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && this.isPopupOpen) {
+                        this.closePopup();
+                    }
+                });
+            }
+
+            openPopup() {
+                if (!this.popupElement || this.isPopupOpen) return;
+
+                this.isPopupOpen = true;
+                this.popupElement.classList.add('show');
+                
+                if (this.overlayElement) {
+                    this.overlayElement.classList.add('show');
+                }
+
+                const messageInput = document.getElementById('chat-message');
+                if (messageInput) {
+                    setTimeout(() => messageInput.focus(), 300);
+                }
+            }
+
+            closePopup() {
+                if (!this.popupElement || !this.isPopupOpen) return;
+
+                this.isPopupOpen = false;
+                this.popupElement.classList.remove('show');
+                
+                if (this.overlayElement) {
+                    this.overlayElement.classList.remove('show');
+                }
+            }
+
+            sendMessage() {
+                const messageInput = document.getElementById('chat-message');
+                if (!messageInput) return;
+
+                const customMessage = messageInput.value.trim();
+                if (customMessage) {
+                    this.openWhatsApp(customMessage);
+                    messageInput.value = '';
+                    this.closePopup();
+                }
+            }
+
+            openWhatsApp(customMessage = null) {
+                const message = customMessage || this.config.message;
+                const phoneNumber = this.config.phoneNumber;
+
+                if (!phoneNumber) {
+                    console.error('WhatsApp phone number not configured');
+                    alert('WhatsApp number not configured. Please contact the store directly.');
+                    return;
+                }
+
+                const cleanNumber = phoneNumber.replace(/\D/g, '');
+                const encodedMessage = encodeURIComponent(message);
+                const whatsappURL = `https://wa.me/${cleanNumber}?text=${encodedMessage}`;
+
+                window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+            }
+
+            showWithDelay() {
+                if (!this.floatElement) return;
+
+                this.floatElement.style.opacity = '0';
+                this.floatElement.style.transform = 'translateY(20px) scale(0.8)';
+                this.floatElement.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+
+                setTimeout(() => {
+                    this.floatElement.style.opacity = '1';
+                    this.floatElement.style.transform = 'translateY(0) scale(1)';
+                    
+                    if (this.config.pulseAnimation) {
+                        setTimeout(() => {
+                            this.floatElement.classList.add('pulse');
+                        }, 500);
+                    }
+                }, this.config.delayTime);
+            }
+
+            updateConfig(newConfig) {
+                this.config = { ...this.config, ...newConfig };
+                this.setupConfiguration();
+            }
+        }
+
+        // Initialize WhatsApp Float
+        let whatsappFloat;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const floatElement = document.getElementById('whatsapp-float');
+            if (floatElement) {
+                const config = {
+                    phoneNumber: floatElement.dataset.phone || '',
+                    message: floatElement.dataset.message || 'Hi! I\'m interested in your products.',
+                    position: floatElement.dataset.position || 'right',
+                    showPopup: floatElement.dataset.popup !== 'false',
+                    autoShow: floatElement.dataset.autoShow !== 'false',
+                    showTooltip: floatElement.dataset.tooltip !== 'false',
+                    pulseAnimation: floatElement.dataset.pulse === 'true',
+                    delayTime: parseInt(floatElement.dataset.delay) || 3000
+                };
+
+                whatsappFloat = new WhatsAppFloat(config);
+            }
+        });
+        </script>
+</body>
+</html>
